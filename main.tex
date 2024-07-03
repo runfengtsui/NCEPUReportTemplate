@@ -1,0 +1,31 @@
+\documentclass[a4paper, UTF8, fontset=none]{ctexart}
+
+% 配置文件
+\input{config/config}
+
+\begin{document}
+
+% 清除封面和目录的页码
+\pagenumbering{gobble}
+% 封面
+\input{config/cover}
+
+\tableofcontents
+
+\newpage
+% 从正文开始使用阿拉伯数字页码
+\pagenumbering{arabic}
+
+\section{示例文档}
+
+这是一个示例文档!\cite{book}
+
+\nocite{mastersthesis}
+\nocite{article}
+
+\bibliography{reference}
+% 将参考文献添加到目录中, 手动添加目录方式, 同样适用于下方的附录
+\addcontentsline{toc}{section}{参考文献}
+
+\end{document}
+
